@@ -1,0 +1,37 @@
+[
+    {
+        "_id" : "1",
+        "fullName" : "Ashrafur Rahman",
+        "email" : "ashrafurrahman22@gmail.com",
+        "phone" : "01721778884",
+        "paidAmount" : "1000"
+    },
+    {
+        "_id" : "2",
+        "fullName" : "Muhammad Tushar",
+        "email" : "tushar321@gmail.com",
+        "phone" : "01819625293",
+        "paidAmount" : "5000"
+    },
+    {
+        "_id" : "3",
+        "fullName" : "Mehedi Hasan",
+        "email" : "mehedi45@gmail.com",
+        "phone" : "01585410159",
+        "paidAmount" : "3500"
+    },
+    {
+        "_id" : "4",
+        "fullName" : "Nur Nobi",
+        "email" : "nurNob98@gmail.com",
+        "phone" : "01701289262",
+        "paidAmount" : "6000"
+    },
+    {
+        "_id" : "5",
+        "fullName" : "Sadia Rahman",
+        "email" : "sadia56@gmail.com",
+        "phone" : "01735840057",
+        "paidAmount" : "7000"
+    }
+]
