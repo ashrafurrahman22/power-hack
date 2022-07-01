@@ -12,7 +12,7 @@ const SingleBillings = ({consumer}) => {
 
     const onSubmit = data => {
       console.log(data)
-      const url = `http://localhost:5000/payment/${_id}`
+      const url = `https://royal-doright-26309.herokuapp.com/payment/${_id}`
         fetch(url, {
           method : 'PUT',
           headers : {
@@ -34,7 +34,7 @@ const SingleBillings = ({consumer}) => {
     const handleDelete = id =>{
       const procede = window.confirm('Are You Sure?');
       if(procede){
-        const url = `http://localhost:5000/payment/${id}`
+        const url = `https://royal-doright-26309.herokuapp.com/payment/${id}`
         fetch(url, {
           method : "DELETE"
         })

@@ -11,14 +11,14 @@ const Billings = () => {
 
 
     useEffect(()=>{
-      fetch(`http://localhost:5000/payment?page=${page}&size=${size}`)
+      fetch(`https://royal-doright-26309.herokuapp.com/payment?page=${page}&size=${size}`)
       .then(res => res.json())
       .then(data => setConsumer(data))
   }, [consumers, size])
 
 
     useEffect(()=>{
-      fetch('http://localhost:5000/paymentcount')
+      fetch('https://royal-doright-26309.herokuapp.com/paymentcount')
       .then(res => res.json())
       .then(data =>{
         const count = data.count;

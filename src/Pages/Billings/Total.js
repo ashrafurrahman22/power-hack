@@ -8,7 +8,7 @@ const Total = () => {
 
     const onSubmit = data => {
       console.log(data)
-      const url = `http://localhost:5000/payment`;
+      const url = `https://royal-doright-26309.herokuapp.com/payment`;
       fetch(url,{
         method : 'POST',
         headers : {
@@ -19,7 +19,7 @@ const Total = () => {
       .then(res => res.json())
       .then(result => console.log(result));
   
-      axios.post('http://localhost:5000/payment', data)
+      axios.post('https://royal-doright-26309.herokuapp.com/payment', data)
       .then(response =>{
         const {data} = response;
         console.log(response);
