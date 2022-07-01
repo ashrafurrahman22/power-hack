@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { toast, ToastContainer } from 'react-toastify';
 
 const Total = () => {
   
@@ -26,7 +25,6 @@ const Total = () => {
         console.log(response);
           if(data.insertedId){
           reset();
-          toast.success('Bill added in table');
           }
       });
     };

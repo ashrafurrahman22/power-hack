@@ -1,6 +1,5 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
 import useConsumer from '../../hooks/useConsumer';
 
 const SingleBillings = ({consumer}) => {
@@ -25,7 +24,6 @@ const SingleBillings = ({consumer}) => {
         .then(data => {
           console.log('success', data);
           reset();
-          toast('Updated Successfully');
         });
     };
 
@@ -43,7 +41,6 @@ const SingleBillings = ({consumer}) => {
         .then(res => res.json())
         .then(data => {
           console.log(data)
-          toast.success('Deleted Successfully');
           const remaining = consumer.filter(con => con._id !== id);
           setConsumer(remaining);
           console.log(remaining);

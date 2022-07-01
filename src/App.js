@@ -4,7 +4,7 @@ import Billings from './Pages/Billings/Billings';
 import HomePage from './Pages/HomePage/HomePage';
 import Footer from './Pages/Shared/Footer';
 import Header from './Pages/Shared/Header';
-import { ToastContainer } from 'react-toastify';
+import SignUP from './Pages/SignUp/SignUP';
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage></HomePage>}></Route>
         <Route path='/billings' element={<Billings></Billings>}></Route>
+        <Route path='/signup' element={ <SignUP></SignUP> }></Route>
       </Routes>
       <Footer></Footer>
-      <ToastContainer />
     </div>
   );
 }

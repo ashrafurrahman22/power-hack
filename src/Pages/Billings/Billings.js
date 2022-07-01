@@ -1,10 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import useConsumer from '../../hooks/useConsumer';
 import SingleBillings from './SingleBillings';
 import Total from './Total';
 
 const Billings = () => {
-    const [consumers] = useConsumer();
+    const [consumers, setConsumer] = useState([]);
+
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+    const [size, setSize] = useState(10);
+
+
+    useEffect(()=>{
+      fetch(`http://localhost:5000/payment?page=${page}&size=${size}`)
+      .then(res => res.json())
+      .then(data => setConsumer(data))
+  }, [consumers, size])
+
+
+    useEffect(()=>{
+      fetch('http://localhost:5000/paymentcount')
+      .then(res => res.json())
+      .then(data =>{
+        const count = data.count;
+        const pages = Math.ceil(count/10);
+        setPageCount(pages)
+      })
+    }, [])
 
     return (
         <div>
@@ -37,6 +58,23 @@ const Billings = () => {
 </div>
         </div>
         </div>
+            {/* pagination */}
+            <div className='pagination flex justify-center items-center gap-3 my-4'>
+                  {
+                    [...Array(pageCount).keys()]
+                    .map(number => 
+                    <button
+                    className={page === number ? 'btn btn-primary' : 'btn'}
+                    onClick={()=> setPage(number)}
+                    class="btn">{number+1}</button>
+                    
+                     )
+                  } 
+                  <select onClick={e => setSize(e.target.value) }>
+                        {/* <option value="5">5</option> */}
+                        <option value="10">10</option>
+                    </select>       
+            </div>
         </div>
     );
 };
