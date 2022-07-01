@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import useConsumer from '../../hooks/useConsumer';
 import SingleBillings from './SingleBillings';
 import Total from './Total';
 
 const Billings = () => {
-
-    const [consumers, setConsumer] = useState([]);
-
-    useEffect(()=>{
-        fetch('http://localhost:5000/payment')
-        .then(res => res.json())
-        .then(data => setConsumer(data))
-    }, [consumers])
+    const [consumers] = useConsumer();
 
     return (
         <div>

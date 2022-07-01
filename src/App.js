@@ -4,6 +4,7 @@ import Billings from './Pages/Billings/Billings';
 import HomePage from './Pages/HomePage/HomePage';
 import Footer from './Pages/Shared/Footer';
 import Header from './Pages/Shared/Header';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/billings' element={<Billings></Billings>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

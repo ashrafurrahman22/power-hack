@@ -80,8 +80,6 @@ const Total = () => {
     </div>
   </div>
 </div>
-
-<ToastContainer />
         </div>
     );
 };
